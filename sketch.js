@@ -18,12 +18,13 @@ path.velocityY = 4;
 path.scale=1.2;
 
 //creating boy running
-boyImg = createSprite(180,340,30,30);
-boyImg.scale=0.08;
-boyImg.y.addAnimation("JakeRunning",boyImg);
+boy = createSprite(180,340,30,30);
+boy.scale=0.08;
+boy.addAnimation("JakeRunning",boyImg);
   
 
 leftBoundary=createSprite(0,0,100,800);
+
 leftBoundary.invisible = false;
 leftBoundary.visible = true;
 leftBoundary.invisible = true;
@@ -45,23 +46,22 @@ function draw() {
   boy.collide(leftBoundary);
   boy.collide(rightBoundary);
   
-  //code to reset the background
+//code to reset the background
 
-  if(path.y > 400 ){
-    path.y = height/2;
-  }
+if(path.y > 400 ){
+  path.y = height/2;
+}
 
-  if(path.y > 400 ){
-    path.y = height/2;
-  }
+if(path.y > 400 ){
+   
+  path.y = height/2;
+}
 
-  if(path.y > 400 ){
-    path.y = height/2;
-  }
+if(path.y > 400 ){
+  path.y = height/2;
+}  
 
-  if(path.y > 400 ){
-    path.y = height/2;
-  }
+if(path.y > 400 ){path.y = height/2;}
   
   drawSprites();
 }
